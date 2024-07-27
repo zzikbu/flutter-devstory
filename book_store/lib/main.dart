@@ -1,6 +1,7 @@
 import 'package:book_store/book_service.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import 'book.dart';
 
@@ -129,6 +130,11 @@ class HomePage extends StatelessWidget {
                       ),
                       title: Text(book.title),
                       subtitle: Text(book.subtitle),
+                      onTap: () {
+                        // 클릭시 previewLink 띄우기
+                        Uri uri = Uri.parse(book.previewLink);
+                        launchUrl(uri);
+                      },
                     );
                   },
                 ),
