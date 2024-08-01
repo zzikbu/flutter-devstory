@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyCwZhSE2b3gIw2e13_wmYbs8GfxLZBh0po</string>
+	<key>GCM_SENDER_ID</key>
+	<string>538389201398</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.bucketListWithFirebase</string>
+	<key>PROJECT_ID</key>
+	<string>bucketlistwithfirebase-f0526</string>
+	<key>STORAGE_BUCKET</key>
+	<string>bucketlistwithfirebase-f0526.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:538389201398:ios:6f5259dfc47b5c577ec7d7</string>
+</dict>
+</plist>
