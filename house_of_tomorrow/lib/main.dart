@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:house_of_tomorrow/src/service/cart_service.dart';
 import 'package:house_of_tomorrow/src/service/lang_service.dart';
 import 'package:house_of_tomorrow/src/service/theme_service.dart';
 import 'package:house_of_tomorrow/src/view/shopping/shopping_view.dart';
@@ -11,12 +12,9 @@ void main() {
   runApp(
     MultiProvider(
       providers: [
-        ChangeNotifierProvider(
-          create: (context) => ThemeService(),
-        ),
-        ChangeNotifierProvider(
-          create: (context) => LangService(),
-        ),
+        ChangeNotifierProvider(create: (context) => ThemeService()),
+        ChangeNotifierProvider(create: (context) => LangService()),
+        ChangeNotifierProvider(create: (context) => CartService()),
       ],
       child: const MyApp(),
     ),
@@ -26,9 +24,19 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
+  static final GlobalKey<NavigatorState> navigatorKey = GlobalKey();
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      navigatorKey: navigatorKey,
+      builder: (context, child) {
+        return Overlay(
+          initialEntries: [
+            OverlayEntry(builder: (context) => child!),
+          ],
+        );
+      },
       localizationsDelegates: const [
         S.delegate,
         GlobalMaterialLocalizations.delegate,
